@@ -1,0 +1,26 @@
+#program losuje jedną z pięciu wróżb
+print(
+"""
+\t\t\t    Ciastko z wróżbą\n
+\t\t\t========================\n
+"""
+)
+import random
+print("\n\tJesteś w chińskiej restauracji, po zapłaceniu rachunku dostałeś ciastko z tajemniczą wróżbą")
+print("\tW środku może się znajdować jedna z pięciu unikatowych wróżb.\n\n\tJeśli jesteś gotów by je otworzyć naciśnij enter")
+input()
+wrozba = ""
+wrozba = random.randint(1,5)
+if wrozba == 1:
+    print("Opanujesz kiedyś pythona.")
+elif wrozba == 2:
+    print("Upadniesz i głupi ryj rozwalisz.")
+elif wrozba == 3:
+    print("Znajdziesz stówkę.")
+elif wrozba == 4:
+    print("Wdepniesz w psią kupę.")
+elif wrozba == 5:
+    print("Nic się nie zmieni w Twoim życiu.")
+else:
+    print("f a t a l   e r r o r")
+input("\n\nAby zakończyć program, naciśnij klawisz Enter.")
