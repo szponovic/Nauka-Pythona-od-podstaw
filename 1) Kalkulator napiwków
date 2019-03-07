@@ -1,0 +1,12 @@
+print(
+"""
+\t\t\t  Kalkulator napiwków\n
+\t\t\t========================\n
+\n
+Wprowadź sumę ogólną z rachunku wystawionego dla klienta
+"""
+)
+suma = float(input("Suma:"))
+print("\n15% kwota napiwku wyniesie:", round((suma*0.15),2), "złotych\nZatem rachunek z napiwkiem wyniesie:\n\n",round((suma*1.15),2), "złotych.")
+print("\n\n20% kwota napiwku wyniesie:", round((suma*0.20),2), "złotych\nZatem rachunek z napiwkiem wyniesie:\n\n",round((suma*1.20),2), "złotych.")
+input("\n\n\nAby zakończyć program, naciśnij klawisz Enter.")
