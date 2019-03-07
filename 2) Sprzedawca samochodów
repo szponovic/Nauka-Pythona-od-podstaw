@@ -1,0 +1,21 @@
+#program oblicza cenę samochodu wraz ze wszystkimi podatkami i opłatami
+print(
+"""
+\t\t\t  Sprzedawca samochodów\n
+\t\t\t========================\n
+\n
+Wprowadź cenę podstawową samochodu
+"""
+)
+cena = float(input("Cena:"))
+print("\nCena Podstawowa samochodu:\t\t\t", cena , "złotych")
+podatek = cena*0.23
+print("Podatek (23%):\t\t\t\t\t", round(podatek,2), "złotych")
+oplata = cena*0.03
+print("Opłata rejestracyjna (5%):\t\t\t", round(oplata,2),"złotych")
+print("Prowizja przygotowawcza dealera:\t\t2000.00 złotych")
+print("Opłata za dostarczenie:\t\t\t\t 526.51 złotych")
+print("------------------------------------------------------------------------")
+print("CENA CAŁKOWITA:\t\t\t\t\t", round((cena+podatek+oplata+2000+526.51),2),"złotych")
+
+input("\n\n\nAby zakończyć program, naciśnij klawisz Enter.")
