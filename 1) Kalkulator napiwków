@@ -1,3 +1,4 @@
+#program oblicza napiwek 15% i 20% oraz podaje cenę z napiwkiem
 print(
 """
 \t\t\t  Kalkulator napiwków\n
