@@ -1,0 +1,28 @@
+#program rzuca 100x monetą i podaje ile razy wypadł orzeł a ile reszka
+print(
+"""
+\t\t\t      Rzut monetą\n
+\t\t\t========================\n
+"""
+)
+import random
+print("\n\t Rzucasz monetą sto razy, oto co Ci wypadnie")
+print("\n\tJeśli jesteś gotów  naciśnij enter")
+input()
+rzut = 0
+reszka = 0
+orzel = 0
+moneta = ""
+while rzut != 100:
+    moneta = random.randint(1,2)
+    if moneta == 1:
+        orzel += 1
+        rzut += 1
+    elif moneta == 2:
+        reszka += 1
+        rzut += 1
+    else:
+        print("f a t a l   e r r o r")
+print("\n\nMonetą rzucono łącznie", rzut, "razy.\nOrzeł wypadł",orzel,"razy.\nReszka wypadła", reszka, "razy" )
+
+input("\n\nAby zakończyć program, naciśnij klawisz Enter.")
