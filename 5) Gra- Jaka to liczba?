@@ -1,0 +1,29 @@
+#program wybiera liczbę z przedziału 1-100 a użytkownik ma za zadanie zgadnąć ją w 7 próbach
+print(
+"""
+\t\t\t    Jaka to liczba\n
+\t\t\t========================\n
+"""
+)
+import random
+print("\n\t Mam na myśli pewną liczbę z zakresu od 1 do 100.")
+print("\n\tMając 7 prób odgadnij jaka to liczba.")
+input("Aby zacząć naciśnij enter.")
+proba = 1
+liczba = random.randint(1, 100)
+odp = int(input("Ta liczba to:\n"))
+while odp != liczba and proba <= 6:
+    if odp < liczba:
+        print("Moja liczba jest większa.")
+    else:
+        print("Moja liczba jest mniejsza")
+    odp = int(input("Ta liczba to:\n"))
+    proba += 1
+
+if proba <= 7 and liczba == odp:
+    print("Brawo! Ta liczba to", liczba)
+    print("Musiałeś zgadywać", proba, "razy")
+else:
+    print("Przegrałeś! Nie zmieściłeś się w limicie 7 prób.")
+
+input("\n\nAby zakończyć program, naciśnij klawisz Enter.")
