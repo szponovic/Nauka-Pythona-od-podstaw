@@ -1,0 +1,26 @@
+#Program który liczy za użytkownika. Umożliwia użytkownikowiwprowadzenie liczby początkowej,
+#liczby końcowej i wielkości odstępu między kolejnymi liczbami.
+print(
+"""
+\t\t\t    Liczę za Ciebie \n
+\t\t\t========================\n
+\n
+Ten program policzy za Ciebie od ilu będziesz chciał, do ilu, oraz co ile.\n
+\tPrzykład: od 0 do 10 co 2, czyli to będzie 0 2 4 6 8.
+"""
+)
+od = int(input("Od jakiej liczby zacząć liczenie?\n"))
+do = int(input("Do jakiej liczny liczyć?\n"))
+co = int(input("co ile liczyć?\n"))
+if od > do:
+    co = -co
+    do -= 1
+else:
+    do += 1
+print("liczenie:")
+for i in range(od, do, co):
+    print(i)
+
+
+
+input("\n\nAby zakończyć program, naciśnij klawisz Enter.")
