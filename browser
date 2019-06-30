@@ -1,0 +1,38 @@
+from typing import List
+
+class Browser:
+    def __init__(self):
+        self._history = []
+        self._truehistory = []
+
+    def visit(self, address: str):
+        self._history.append(address)
+        self._truehistory.append(address)
+        print(f'otwarto stronę: {address}')
+
+    def go_back(self):
+        return self._history.pop()
+
+    def history(self) -> List[str]:
+        return self._truehistory
+
+    def current(self) -> str:
+        return self._history [-1]
+
+
+
+opera = Browser()
+opera.visit('www.google.com')
+opera.visit('www.wykop.pl')
+opera.visit('www.google.pl')
+opera.visit('www.kwejk.pl')
+
+print(opera.current())
+
+print(opera.history())
+
+opera.go_back()
+
+print(opera.current())
+
+print(opera.history())
