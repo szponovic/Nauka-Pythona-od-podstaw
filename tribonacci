@@ -1,0 +1,7 @@
+def tribonacci(signature, n):
+    a = 0
+    while a <= n:
+        new_number = signature[-1] + signature[-2] + signature[-3]
+        signature.append(new_number)
+        a += 1
+    return signature[0:n]
