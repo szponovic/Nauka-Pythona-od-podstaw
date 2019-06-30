@@ -1,0 +1,16 @@
+import time
+
+def timer(func):
+    print('wait...\n')
+    time.sleep(1)
+    print('you naughty boy...\n')
+    time.sleep(2)
+    return f'Finished in {time.perf_counter()} secs'
+
+
+@timer
+def run_this():
+    for _ in range(999):
+        sum([i**2 for i in range(10000)])
+
+print(run_this)
