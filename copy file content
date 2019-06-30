@@ -1,0 +1,6 @@
+def copy_file_content(filename, target_filename):
+    with open(filename, 'r') as handler:
+        content = handler.read()
+
+    with open(target_filename, 'a') as target_handler:
+        target_handler.write(content)
