@@ -1,0 +1,6 @@
+def find_max(numbers: List[int]):
+    x = numbers[0]
+    for i in numbers:
+        if i > x:
+            x = i
+    return x
