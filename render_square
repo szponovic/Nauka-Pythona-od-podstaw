@@ -1,0 +1,8 @@
+def render_square(size):
+    result = ''
+    for step in range(size):
+        if step == 0 or step == size-1:
+            result += '#' * size + '\n'
+        else:
+            result += '#' + ' '*(size-2)+'#\n'
+    return result
