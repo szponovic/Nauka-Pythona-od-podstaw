@@ -1,0 +1,13 @@
+from typing import List
+
+def bubble_sort(numbers: List[int])->List[int]:
+    max_numbers = len(numbers)
+    new_list = numbers
+    changes = False
+    for step in range(max_numbers-1):
+        if new_list[step+1] < new_list[step]:
+            new_list[step], new_list[step+1] = new_list[step+1], new_list[step]
+            changes = True
+    if changes == True:
+        bubble_sort(new_list)
+    return new_list
