@@ -1,0 +1,12 @@
+def quicksort(elements: List[int]) -> List[int]:
+    if len(elements) <= 1:
+        return elements
+    pivot = elements.pop()
+    left = []
+    right = []
+    for element in elements:
+        if element >= pivot:
+            right.append(element)
+        if element < pivot:
+            left.append(element)
+    return quicksort(left) + [pivot] + quicksort(right)
