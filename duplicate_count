@@ -1,0 +1,9 @@
+def duplicate_count(text: str)-> int:
+    uniques = set(text.lower())
+    duplicates = []
+    for symbol in text.lower():
+        duplicates.append(symbol)
+    for letter in uniques:
+        if letter in duplicates:
+            duplicates.remove(letter)
+    return len(set(duplicates))
