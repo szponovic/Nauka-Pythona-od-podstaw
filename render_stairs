@@ -1,0 +1,5 @@
+def render_stairs(size)-> str:
+    result = ' '
+    for step in range(size+1):
+        result += ' '*(size-step)+'#'*step+'\n'
+    return result
